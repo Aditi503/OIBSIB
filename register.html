@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+                align-items: center;
+                }
+                h1{
+                    color:  #F08080;
+                }
+                .container {
+                padding: 16px;
+                background-color: white;
+                align-items: center;
+                }
+                input[type=text], input[type=password] {
+                width: 50%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #F5E0DB;
+                }
+                input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+                }
+                .registerbtn {
+                background-color: #F08080;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 50%;
+                opacity: 0.9;
+                }
+
+
+            </style>
+    </head>
+    <script>  
+        function validateform(){  
+        var fname=document.myform.fname.value;  
+        var lname=document.myform.lname.value;
+        var password=document.myform.password.value;  
+        var address=document.myform.address.value;
+        var num=document.myform.num.value;  
+        var x=document.myform.email.value;  
+        var atposition=x.indexOf("@");  
+        var dotposition=x.lastIndexOf(".");  
+
+
+        if (fname==null || fname==""){  
+          alert("First Name can't be blank");  
+          return false;  
+        }else if(fname.length<6){
+            alert("First Name must be at least 6 characters long.");
+            return false;
+        }else if (lname==null || lname==""){  
+          alert("Last Name can't be blank");  
+          return false;  
+        }else if(password.length<6){  
+          alert("Password must be at least 6 characters long.");  
+          return false;  
+        }else if (address==null || address==""){  
+          alert("Address can't be blank");  
+          return false;  
+        }else if(num.length!=10){  
+            alert("Mobile number must be 10 digit long");  
+            return false;  
+        }else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+            alert("Please enter a valid e-mail address ");  
+            return false;  
+         }  
+        else{  
+            return true;  
+        }    
+    }
+        </script>  
+        <body>  
+            <div class="container">
+        <form name="myform" method="post" action="#" onsubmit="return validateform()" > 
+            <h1>Registration Form</h1>
+            <div class="row">
+                <div class="col-25">
+                  <label for="fname">First Name (6 characters long)</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="fname">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Last Name: (cannot be blank )</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="lname">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Password:(Alphanumeric with 6 characters long )</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" name="password">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Address: (Cannot be blank )</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="address">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Mobile Number:(10 digit long)</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="num"><span id="numloc"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Email:(Valid email with @gmail.domain )</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="email">
+                </div>
+              </div>
+              <div class="row">
+                <input type="submit" value="Submit" class="registerbtn">
+              </div>
+        </form>
+        </div>
+        </body>
+</html>
+

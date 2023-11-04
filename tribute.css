@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+@import url("https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+// Text Styles
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+$font-sans: "Open Sans", sans-serif;
+
+@font-title: 'Saira', sans-serif;
+
+// Colors
+$white: #ffffff;
+
+body {
+  font-family: $font-sans;
+}
+
+.timeline {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  justify-items: center;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
+}
+
+.timeline::after {
+  height: 3300px;
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #CD7F32;
+  top: 0;
+  bottom: 0;
+  left: 35px;
+  margin-top: 135px;
+}
+
+.container {
+  text-align: left;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #CD7F32;
+  border: 4px solid #C04000;
+  top: 45px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::after,
+.right::after {
+  left: 15px;
+}
+.right::after {
+  left: -16px;
+}
+.content {
+  width: 70%;
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+.content h2{
+  color: #CD7F32;
+}
+
+#timeline-header {
+  margin-top: 70px;
+  color: #CD7F32;
+  font-family: @font-title;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 2.6em;
+}
+
+.main-content {
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  right: 0;
+  background-color: #CD7F32;
+}
+
+.bio {
+  margin-left: 50px;
+  height: 90%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#image {
+  max-height: 325px;
+  max-width: 325px;
+  display: block;
+}
+
+#title {
+  margin-left: 20px;
+  margin-top: 80x;
+}
+
+h1 {
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-size: 48px;
+  color: white;
+}
+
+#tribute-info {
+  min-width: 50px;
+  max-width: 500px;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 80x;
+}
+
+#img-caption {
+  min-width: 50px;
+  max-width: 500px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+
+@media screen and (max-width: 1050px) {
+  #small {
+    display: inline-block;
+  }
+  #big {
+    display: none;
+  }
+}
